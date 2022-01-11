@@ -33,3 +33,9 @@ function Switch-GitBranch {
 }
 
 New-Alias -Name gco -Value Switch-GitBranch -Force -Option AllScope
+
+function Get-GitBranch {
+  git branch $args
+}
+
+New-Alias -Name gb -Value Get-GitBranch -Force -Option AllScope
