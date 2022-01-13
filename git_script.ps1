@@ -39,3 +39,15 @@ function Get-GitBranch {
 }
 
 New-Alias -Name gb -Value Get-GitBranch -Force -Option AllScope
+
+function Add-GitBranch {
+  git checkout -b $args
+}
+
+New-Alias -Name gcb -Value Add-GitBranch -Force -Option AllScope
+
+function Add-GitRemoteBranch {
+  git push -u $args
+}
+
+New-Alias -Name gpu -Value Add-GitRemoteBranch -Force -Option AllScope
