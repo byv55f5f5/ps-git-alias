@@ -28,11 +28,11 @@ function Get-GitBranch {
 
 New-Alias -Name gb -Value Get-GitBranch -Force -Option AllScope
 
-function Add-GitBranch {
-  git checkout -b $args
+function Add-GitFeaturesBranch {
+  git checkout -b features/$args
 }
 
-New-Alias -Name gcb -Value Add-GitBranch -Force -Option AllScope
+New-Alias -Name gcbf -Value Add-GitFeaturesBranch -Force -Option AllScope
 
 function Push-GitRemoteBranch {
   git push origin $args
