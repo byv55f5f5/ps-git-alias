@@ -4,12 +4,6 @@ function Get-GitStatus {
 
 New-Alias -Name gs -Value Get-GitStatus -Force -Option AllScope
 
-function Push-Gerrit {
-  git push origin HEAD:refs/for/$args
-}
-
-New-Alias -Name gpor -Value Push-Gerrit -Force -Option AllScope
-
 function Copy-GitCommit {
   git cherry-pick $args
 }
@@ -28,12 +22,6 @@ function Get-GitOneLineLog {
 
 New-Alias -Name gl -Value Get-GitOneLineLog -Force -Option AllScope
 
-function Switch-GitBranch {
-  git checkout $args
-}
-
-New-Alias -Name gco -Value Switch-GitBranch -Force -Option AllScope
-
 function Get-GitBranch {
   git branch $args
 }
@@ -46,8 +34,8 @@ function Add-GitBranch {
 
 New-Alias -Name gcb -Value Add-GitBranch -Force -Option AllScope
 
-function Add-GitRemoteBranch {
-  git push -u $args
+function Push-GitRemoteBranch {
+  git push origin $args
 }
 
-New-Alias -Name gpu -Value Add-GitRemoteBranch -Force -Option AllScope
+New-Alias -Name gpo -Value Push-GitRemoteBranch -Force -Option AllScope
