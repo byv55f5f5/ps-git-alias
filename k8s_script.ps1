@@ -28,6 +28,12 @@ function Get-K8sService {
 
 New-Alias -Name kbgs -Value Get-K8sService -Force -Option AllScope
 
+function Get-K8sAll {
+  kubectl get all -o wide $args
+}
+
+New-Alias -Name kbga -Value Get-K8sAll -Force -Option AllScope
+
 function Get-K8sResouceDetails {
   kubectl describe $args
 }

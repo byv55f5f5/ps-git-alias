@@ -29,7 +29,7 @@ function Get-GitBranch {
 New-Alias -Name gb -Value Get-GitBranch -Force -Option AllScope
 
 function Add-GitFeaturesBranch {
-  git checkout -b features/$args
+  git checkout -b feature/$args
 }
 
 New-Alias -Name gcbf -Value Add-GitFeaturesBranch -Force -Option AllScope
