@@ -39,3 +39,9 @@ function Push-GitRemoteBranch {
 }
 
 New-Alias -Name gpo -Value Push-GitRemoteBranch -Force -Option AllScope
+
+function Push-GitRemoteFeatureBranch {
+  git push origin feature/$args
+}
+
+New-Alias -Name gpof -Value Push-GitRemoteFeatureBranch -Force -Option AllScope
