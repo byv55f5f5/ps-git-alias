@@ -16,6 +16,12 @@ function Get-GitPullRebase {
 
 New-Alias -Name gpr -Value Get-GitPullRebase -Force -Option AllScope
 
+function Get-GitPullRebaseOriginDev {
+  git pull --rebase origin dev
+}
+
+New-Alias -Name gprod -Value Get-GitPullRebaseOriginDev -Force -Option AllScope
+
 function Get-GitOneLineLog {
   git log --oneline --all --graph --decorate $args
 }
